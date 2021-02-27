@@ -9,44 +9,47 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            ProductTest();
+            //  ProductTest();
             //categoryTest();
 
 
         }
 
 
-        private static void ProductTest()
-        {
-            ProductManager productManager = new ProductManager(new EfProductDal());
+        //    private static void ProductTest()
+        //    {
+        //       ProductManager productManager = new ProductManager(new EfProductDal());
 
-            var result = productManager.GetProductDetails();
+        //        var result = productManager.GetProductDetails();
 
-            if (result.Success)
-            {
-                foreach (var product in result.Data )
-                {
-                    Console.WriteLine("{0} - {1} ", product.ProductName, product.CategoryName);
-                }
-            }
-            else
-            {
-                Console.WriteLine(result.Message);
-            }
+        //        if (result.Success)
+        //        {
+        //            foreach (var product in result.Data )
+        //            {
+        //                Console.WriteLine("{0} - {1} ", product.ProductName, product.CategoryName);
+        //            }
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine(result.Message);
+        //        }
 
-         
-        }
 
-        private static void CategoryTest()
-        {
-            CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
+        //    }
 
-            foreach (var category in categoryManager.GetAll())
-            {
-                Console.WriteLine(category.CategoryName);
-            }
+        //    private static void CategoryTest()
+        //    {
+        //        CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
 
-            Console.WriteLine(categoryManager.GetById(2).CategoryName);
-        }
+        //        foreach (var category in categoryManager.GetAll())
+        //        {
+        //            Console.WriteLine(category.CategoryName);
+        //        }
+
+        //        Console.WriteLine(categoryManager.GetById(2).CategoryName);
+        //    }
+        //
     }
 }
+
+
